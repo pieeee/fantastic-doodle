@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model news_feed {
+  id                                         Int      @id @default(autoincrement())
+  request_id                                 Int
+  companyname                                String?
+  url                                        String?
+  insider                                    String?
+  outsider                                   String?
+  ceo                                        String?
+  title                                      String?
+  date                                       String?
+  company_rel                                Float?
+  insider_rel                                Float?
+  outsider_rel                               Float?
+  ceo_rel                                    Float?
+  company_sentiment                          Float?
+  insider_sentiment                          String?
+  outsider_sentiment                         String?
+  ceo_sentiment                              String?
+  GHG_emissions_similarity                   Float?
+  GHG_emissions_sentiment                    String?
+  Air_quality_similarity                     Float?
+  Air_quality_sentiment                      String?
+  Energy_management_similarity               Float?
+  Energy_management_sentiment                String?
+  Water_wastewater_management_similarity     Float?
+  Water_wastewater_management_sentiment      String?
+  Waste_hazardous_management_similarity      Float?
+  Waste_hazardous_management_sentiment       String?
+  Ecological_impact_similarity               Float?
+  Ecological_impact_sentiment                String?
+  Human_rights_community_similarity          Float?
+  Human_rights_community_sentiment           String?
+  Customer_privacy_similarity                Float?
+  Customer_privacy_sentiment                 String?
+  Data_security_similarity                   Float?
+  Data_security_sentiment                    String?
+  Access_affordability_similarity            Float?
+  Access_affordability_sentiment             String?
+  Product_quality_safety_similarity          Float?
+  Product_quality_safety_sentiment           String?
+  Customer_welfare_similarity                Float?
+  Customer_welfare_sentiment                 String?
+  Selling_practices_product_label_similarity Float?
+  Selling_practices_product_label_sentiment  String?
+  Labor_practices_similarity                 Float?
+  Labor_practices_sentiment                  String?
+  Modern_slavery_similarity                  Float?
+  Modern_slavery_sentiment                   String?
+  Employee_health_safety_similarity          Float?
+  Employee_health_safety_sentiment           String?
+  Employee_engagement_diversity_similarity   Float?
+  Employee_engagement_diversity_sentiment    String?
+  Gender_equality_similarity                 Float?
+  Gender_equality_sentiment                  String?
+  Product_design_lifecycle_similarity        Float?
+  Product_design_lifecycle_sentiment         String?
+  Business_model_resilience_similarity       Float?
+  Business_model_resilience_sentiment        String?
+  Environmental_supply_chain_similarity      Float?
+  Environmental_supply_chain_sentiment       String?
+  Social_supply_chain_similarity             Float?
+  Social_supply_chain_sentiment              String?
+  Materials_sourcing_efficiency_similarity   Float?
+  Materials_sourcing_efficiency_sentiment    String?
+  Physical_impacts_climate_change_similarity Float?
+  Physical_impacts_climate_change_sentiment  String?
+  Governance_structures_similarity           Float?
+  Governance_structures_sentiment            String?
+  Business_ethics_similarity                 Float?
+  Business_ethics_sentiment                  String?
+  Competitive_behavior_similarity            Float?
+  Competitive_behavior_sentiment             String?
+  Management_legal_regulatory_similarity     Float?
+  Management_legal_regulatory_sentiment      String?
+  Risk_management_similarity                 Float?
+  Risk_management_sentiment                  String?
+  Coronavirus_similarity                     Float?
+  Coronavirus_sentiment                      String?
+  Sustainable_Development_Goal_1_similarity  Float?
+  Sustainable_Development_Goal_1_sentiment   String?
+  Sustainable_Development_Goal_2_similarity  Float?
+  Sustainable_Development_Goal_2_sentiment   String?
+  Sustainable_Development_Goal_3_similarity  Float?
+  Sustainable_Development_Goal_3_sentiment   String?
+  Sustainable_Development_Goal_4_similarity  Float?
+  Sustainable_Development_Goal_4_sentiment   String?
+  Sustainable_Development_Goal_5_similarity  Float?
+  Sustainable_Development_Goal_5_sentiment   String?
+  Sustainable_Development_Goal_6_similarity  Float?
+  Sustainable_Development_Goal_6_sentiment   String?
+  Sustainable_Development_Goal_7_similarity  Float?
+  Sustainable_Development_Goal_7_sentiment   String?
+  Sustainable_Development_Goal_8_similarity  Float?
+  Sustainable_Development_Goal_8_sentiment   String?
+  Sustainable_Development_Goal_9_similarity  Float?
+  Sustainable_Development_Goal_9_sentiment   String?
+  Sustainable_Development_Goal_10_similarity Float?
+  Sustainable_Development_Goal_10_sentiment  String?
+  Sustainable_Development_Goal_11_similarity Float?
+  Sustainable_Development_Goal_11_sentiment  String?
+  Sustainable_Development_Goal_12_similarity Float?
+  Sustainable_Development_Goal_12_sentiment  String?
+  Sustainable_Development_Goal_13_similarity Float?
+  Sustainable_Development_Goal_13_sentiment  String?
+  Sustainable_Development_Goal_14_similarity Float?
+  Sustainable_Development_Goal_14_sentiment  String?
+  Sustainable_Development_Goal_15_similarity Float?
+  Sustainable_Development_Goal_15_sentiment  String?
+  Sustainable_Development_Goal_16_similarity Float?
+  Sustainable_Development_Goal_16_sentiment  String?
+  Sustainable_Development_Goal_17_similarity Float?
+  Sustainable_Development_Goal_17_sentiment  String?
+  Controversial_weapons_similarity           Float?
+  Controversial_weapons_sentiment            String?
+  createdAt                                  DateTime @default(now())
+  updatedAt                                  DateTime @updatedAt
+}

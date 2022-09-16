@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  postgres-db:
+    image: postgres
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5436:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: news
+volumes:
+  pgdata:
